@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "我的本地记忆填充",
+  "version": "1.1",
+  "description": "记住输入框上一次填写的内容，点击输入框即可选择填入。完全离线。",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ]
+}
